@@ -6,10 +6,10 @@ import state from "./state";
 
 let currentCategory = "tires";
 
-function changeCategory(current) {
+function changeCategory(category) {
   // parameter and value need to be the same here for this simple function.
-  // otherwise, fnc doesn't work without use of current value
-  currentCategory = current;
+  // otherwise, fnc doesn't work without use of category value
+  currentCategory = category;
   render();
 };
 
@@ -20,6 +20,7 @@ function render() {
     state={state}
     products={state.products}
     currentCategory={currentCategory}
+    changeCategory={changeCategory}
      />,
     document.getElementById("root")
   );

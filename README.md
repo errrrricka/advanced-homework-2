@@ -14,7 +14,7 @@ DONE --- Fork, Clone, yarn install, yarn start
 * DONE --- Make sure to import and use all these components back in App
 * DONE --- Create a variable in index.js called currentCategory and set it to "tires"
 * DONE --- Create a function in index.js called changeCategory thats takes a parameter category. It will assign category to currentCategory and call render()
-* Send the changeCategory function to App and then to the TopNav component by way of props
+* DONE --- Send the changeCategory function to App and then to the TopNav component by way of props
 * Send the currentCategory to App by way of props
 * App should use the currentCategory value to filter the array of products by category and then map over them to create ProductDetail components
 * Modify TopNav

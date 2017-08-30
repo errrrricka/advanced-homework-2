@@ -36,7 +36,7 @@ function App(props) {
 			<div className="clear"> </div>
       <SubHeader />
 			<div className="clear"> </div>
-      <TopNav changeCategory={props.changeCategory} />
+      <TopNav changeCategory={props.changeCategory}/>
 
 			</div>
 
