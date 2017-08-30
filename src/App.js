@@ -9,6 +9,22 @@ import "./App.css";
 
 
 function App(props) {
+  // var ProductList = [];
+  // // for(var i = 0; i < 5; i++){
+  // //   var p = props.products[i];
+  // //   ProductList.push(<ProductDetail product={p} />);
+  // // }
+  //
+  // ProductList = props.products.map((p) => {
+  //   return <ProductDetail product={p} />;
+
+  const ProductList = props.state.products.filter(product => {
+    return product.category === props.currentCategory;
+  }).map(product => {
+    return <ProductDetail product={product} />
+});
+  // console.log("this is my product list array",ProductList);
+
     return (
       <div className="App">
         	<div className="wrap">
@@ -20,7 +36,7 @@ function App(props) {
 			<div className="clear"> </div>
       <SubHeader />
 			<div className="clear"> </div>
-      <TopNav />
+      <TopNav changeCategory={props.changeCategory} />
 
 			</div>
 
@@ -32,7 +48,7 @@ function App(props) {
 					<div className="products">
 						<h5><span>FEATURED</span> PRODUCTS</h5>
 						<div className="section group">
-              <ProductDetail/>
+            {ProductList}
 						</div>
 					</div>
 					<div className="products products-secondbox">
